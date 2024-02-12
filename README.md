@@ -1,2 +1,2 @@
-# githubTestlolagain
-testing out the name of the repository
+# Python Project tutorial code
+the code for this is being uploaded onto github
