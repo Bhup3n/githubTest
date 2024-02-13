@@ -2,6 +2,7 @@ names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Henry", "
         "Katie", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Rachel", "Sam", "Tyler"]
 
 middleIndex = len(names) // 2
+testingVariable = False
 
 valueWanted = input(f"Welcome to the value chooser!\nselect a value you want from the following list:\n{names}\nenter here:")
 
