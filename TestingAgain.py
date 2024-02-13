@@ -8,4 +8,4 @@ for i in range(0, len(names)):
             names[j+1] = names[j]
             names[j] = nameToSwap
 
-print(names) #now unjumbled
+print(names) #now unjumbled like lol
