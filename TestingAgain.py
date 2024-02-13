@@ -4,6 +4,7 @@ names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Henry", "
 middleIndex = len(names) // 2
 
 valueWanted = input(f"Welcome to the value chooser!\nselect a value you want from the following list:\n{names}\nenter here:")
+testVariable = False
 
 for i in range(2, len(names) + 1):
     if names[middleIndex] < valueWanted:
