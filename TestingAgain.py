@@ -9,4 +9,3 @@ for i in range(0, len(names)):
             names[j] = nameToSwap
 
 print(names) #now unjumbled like lol
-testVariable = False
