@@ -11,4 +11,4 @@ for i in range(0, len(names)):
 print(names) #now unjumbled like lol
 
 variable = False
-num1 = int(input("enter a number"))----
+num1 = int(input("enter a number"))
