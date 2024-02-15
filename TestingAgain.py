@@ -1,3 +1,6 @@
+def testFunction(num1, num2):
+    return num1 + num2
+
 names = ["Tyler", "Katie", "Ivy", "Noah", "Rachel", "Eva", "Charlie", "Liam", "Mia", "Jack",
          "Bob", "Olivia", "Frank", "Grace", "Alice", "Sam", "Quinn", "David", "Peter", "Henry"]
 
@@ -9,3 +12,4 @@ for i in range(0, len(names)):
             names[j] = nameToSwap
 
 print(names) #now unjumbled like lol
+print(testFunction(5, 6))
