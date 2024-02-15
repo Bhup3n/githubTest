@@ -1,11 +1,17 @@
-names = ["Tyler", "Katie", "Ivy", "Noah", "Rachel", "Eva", "Charlie", "Liam", "Mia", "Jack",
-         "Bob", "Olivia", "Frank", "Grace", "Alice", "Sam", "Quinn", "David", "Peter", "Henry"]
+names = ["Alice", "Bob", "Charlie", "David", "Eva", "Frank", "Grace", "Henry", "Ivy", "Jack",
+        "Katie", "Liam", "Mia", "Noah", "Olivia", "Peter", "Quinn", "Rachel", "Sam", "Tyler"]
 
-for i in range(0, len(names)):
-    for j in range(0, len(names) - i - 1):
-        if names[j] > names[j+1]: #if the name should be swapped
-            nameToSwap = names[j+1] #using a temporary variable to store the name that will be swapped
-            names[j+1] = names[j]
-            names[j] = nameToSwap
+middleIndex = len(names) // 2
 
-print(names) #now unjumbled like lol
+valueWanted = input(f"Welcome to the value chooser!\nselect a value you want from the following list:\n{names}\nenter here:")
+
+for i in range(2, len(names) + 1):
+    if names[middleIndex] < valueWanted:
+        middleIndex += len(names) // (2 * i)
+    if names[middleIndex] > valueWanted:
+        middleIndex -= len(names) // (2 * i)
+    if names[middleIndex] == valueWanted:
+        print(f"{valueWanted} is found at index {middleIndex}")
+        break
+if names[middleIndex] != valueWanted:
+    print(f"{valueWanted} is not in the list")
