@@ -21,6 +21,3 @@ with open("marks.txt", "r") as file: #read from the file
                 currentHighestMark = currentMark #then our current mark is our new current highest mark
                 currentHighestMarkHolder = row[0] #the holder of that mark is also assigne
         print(currentHighestMarkHolder, currentHighestMark) #print out the holder and the mark they got
-
-
-file.close() #closes the file after we are finished with it

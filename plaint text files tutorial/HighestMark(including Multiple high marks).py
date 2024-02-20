@@ -27,6 +27,3 @@ with open("marks (Including multiple highest marks).txt", "r") as file: #read fr
             if int(currentMark) == int(highestMark): #if our current mark is equal to the highest mark
                 highestMarkHolders.append(row[0]) #add the holder of that mark into the list
         print(f"{highestMarkHolders} all have marks of {highestMark}") #print out the highest mark and mark holders
-
-
-file.close() #closes the file after we are finished with it
