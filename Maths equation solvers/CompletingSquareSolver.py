@@ -23,24 +23,27 @@ def findX(a, tpX, tpY, dp):
     print(f"x = {round(x1, dp)}   or   x = {round(x2, dp)}")
 
 def findCompletedSquareForm(a, b, c, dp, rounded):
-    if rounded:
-        if a > 1 and c >= 0:
-            print(f"\nCSF = {round(a, dp)}(x + {-(round(b, dp))})² + {round(c, dp)}")
-        elif a > 1 and c < 0:
-            print(f"\nCSF = {round(a, dp)}(x + {-(round(b, dp))})² - {round(abs(c), dp)}")
-        elif a == 1 and c >= 0:
-            print(f"\nCSF = (x + {-(round(b, dp))})² + {round(c, dp)}")
-        else:
-            print(f"\nCSF = (x + {-(round(b, dp))})² - {round(abs(c), dp)}")
+    if a > 1 or a < 0:
+        aPart = a
+        aPartRounded = round(a, dp)
     else:
-        if a > 1 and c >= 0:
-            print(f"\nCSF = {a}(x + {-(b)})² + {c}")
-        elif a > 1 and c < 0:
-            print(f"\nCSF = {a}(x + {-(b)})² - {abs(c)}")
-        elif a == 1 and c >= 0:
-            print(f"\nCSF = (x + {-(b)})² + {c}")
-        else:
-            print(f"\nCSF = (x + {-(b)})² - {abs(c)}")
+        aPart = ""
+        aPartRounded = ""
+    if -(b) >= 0:
+        bSymbol = "+"
+    else:
+        bSymbol = "-"
+    if c >= 0:
+        cSymbol = "+"
+    else:
+        cSymbol = "-"
+
+    bPartRounded = round(b, dp)
+    cPartRounded = round(c, dp)
+    if rounded:
+        print(f"\nCSF = {aPartRounded}(x {bSymbol} {abs(bPartRounded)})² {cSymbol} {abs(cPartRounded)}")
+    else:
+        print(f"\nCSF = {aPart}(x {bSymbol} {abs(b)})² {cSymbol} {abs(c)}")
 
 a = float(input("enter a: "))
 b = float(input("enter b: "))
